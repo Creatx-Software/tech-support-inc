@@ -3,7 +3,6 @@
 @section('content')
 
     @include('frontend.home.hero')
-    @include('frontend.home.banner')
     @include('frontend.home.about')
     @include('frontend.home.services')
     @include('frontend.home.testimonials')
