@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Rivora - Luxury Hotel Booking HTML Template</title>
+    <title>Tech Support Inc - Reliable IT Support for UK Small Businesses</title>
     <link rel="icon" href="/assets/images/icon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
-    <meta content="" name="description" >
-    <meta content="" name="keywords" >
-    <meta content="" name="author" >
+    <meta content="Tech Support Inc is a UK-based IT support company helping small businesses stay secure, connected, and running smoothly with reliable IT support and technology solutions." name="description" >
+    <meta content="IT support, managed IT services, cybersecurity, UK small business IT, helpdesk support, cloud backup" name="keywords" >
+    <meta content="Tech Support Inc" name="author" >
     <!-- CSS Files
     ================================================== -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
