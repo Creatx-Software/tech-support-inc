@@ -31,9 +31,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        Copyright 2026 - Rivora by Designesia
+                        Copyright © {{ date('Y') }} Tech Support Inc. All rights reserved.
+                        <div style="font-size: 12px;">Designed and developed by <a href="https://creatxsoftware.com/" target="_blank" rel="noopener" class="creatx-link">CreatX Software.</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <style>
+        .text-light a.creatx-link:hover {
+            color: #ff8c00;
+        }
+    </style>
