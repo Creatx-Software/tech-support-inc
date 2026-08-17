@@ -19,14 +19,14 @@
                   <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide text-light">
-                        <div class="swiper-inner" data-bgimage="url(/assets/images/slider/3.webp)">
+                        <div class="swiper-inner" data-bgimage="url(/assets/images/slider/pexels-cottonbro-6804071.jpg)">
                             <div class="sw-overlay op-6"></div>
                         </div>
                     </div>
 
                     <!-- Slides -->
                     <div class="swiper-slide text-light">
-                        <div class="swiper-inner" data-bgimage="url(/assets/images/slider/4.webp)">
+                        <div class="swiper-inner" data-bgimage="url(/assets/images/slider/pexels-silverkblack-36733322.jpg)">
                             <div class="sw-overlay op-6"></div>
                         </div>
                     </div>
