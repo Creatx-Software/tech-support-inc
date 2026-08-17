@@ -1,336 +1,1065 @@
 ﻿<!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!--<![endif]-->
+<html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2VCT23PGD6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-2VCT23PGD6');
-    </script>
-
-    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-
-      fbq('init', '946182625169331');
-      fbq('track', 'PageView');
-    </script>
-    <noscript>
-      <img height="1" width="1"
-        src="https://www.facebook.com/tr?id=946182625169331&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- End Meta Pixel Code -->
-
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Google Fonts (async — non-blocking) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Salsa&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Salsa&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap"></noscript>
-
-    <!-- Preload LCP hero image — must match the exact src used in hero.blade.php -->
-    @if(request()->routeIs('home') || request()->is('/'))
-    <link rel="preload" as="image" href="{{ asset('assets/images/hero/picture_3 (1)-compressed.webp') }}" fetchpriority="high">
-    @endif
-
-    {{-- Dynamic Title --}}
-    <title>@yield('title', 'Aromat - Natural & Organic Baby Food in Sri Lanka')</title>
-
-    {{-- Basic Meta Tags --}}
-    <meta name="author" content="Aromat">
-    <meta name="description" content="@yield('meta_description', 'Aromat is Sri Lanka&#39;s trusted baby food brand offering safe, nutritious, and affordable natural &amp; organic food for babies from 6 months onward. Shop baby cereals, purees, puffs, biscuits, and more.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'baby food Sri Lanka, children food Sri Lanka, kids food Sri Lanka, toddler food Sri Lanka, organic baby food, natural baby food, infant food Sri Lanka, baby cereal Sri Lanka, baby purees, weaning food Sri Lanka, buy baby food online Sri Lanka, baby food delivery Sri Lanka, 6 month baby food, baby snacks Sri Lanka, baby biscuits, baby puffs, baby yogurt, Aromat baby food, healthy baby food, baby nutrition Sri Lanka')">
-    <meta name="robots" content="INDEX,FOLLOW">
-
-    {{-- Canonical URL --}}
-    <link rel="canonical" href="{{ url()->current() }}" />
-
-    {{-- Open Graph Meta Tags --}}
-    <meta property="og:title" content="@yield('title', 'Aromat — Natural & Organic Baby Food in Sri Lanka')">
-    <meta property="og:description" content="@yield('meta_description', 'Aromat is Sri Lanka&#39;s trusted baby food brand offering safe, nutritious, and affordable natural &amp; organic food for babies from 6 months onward.')">
-    <meta property="og:type" content="@yield('og_type', 'website')">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="@yield('og_image', asset('assets/images/logo/og_image_2.webp'))">
-    <meta property="og:image:secure_url" content="@yield('og_image', asset('assets/images/logo/og_image_2.webp'))">
-    <meta property="og:image:type" content="image/webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="@yield('title', 'Aromat — Natural & Organic Baby Food in Sri Lanka')">
-    <meta property="og:site_name" content="Aromat">
-    <meta property="og:locale" content="en_US">
-
-    {{-- Twitter Card Tags --}}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="@yield('title', 'Aromat — Natural & Organic Baby Food in Sri Lanka')">
-    <meta name="twitter:description" content="@yield('meta_description', 'Aromat is Sri Lanka&#39;s trusted baby food brand offering safe, nutritious, and affordable natural &amp; organic food for babies from 6 months onward.')">
-    <meta name="twitter:image" content="@yield('og_image', asset('assets/images/logo/og_image_2.webp'))">
-    <meta name="twitter:image:alt" content="@yield('title', 'Aromat — Natural & Organic Baby Food in Sri Lanka')">
-
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- For Window Tab Color -->
-    <meta name="theme-color" content="#4a7c3f">
-    <meta name="msapplication-navbutton-color" content="#4a7c3f">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#4a7c3f">
-
-    <!-- Favicon and Touch Icons -->
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/logo/favicon_icon/favicon-16x16.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/logo/favicon_icon/favicon-32x32.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/logo/favicon_icon/apple-touch-icon.png') }}">
-    <link rel="manifest" href="{{ asset('assets/images/logo/favicon_icon/site.webmanifest') }}">
-    <meta name="msapplication-TileImage" content="{{ asset('assets/images/logo/favicon_icon/favicon-32x32.png') }}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-
-    {{-- Schema.org Markup for Local Business --}}
-    <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": ["LocalBusiness", "Store"],
-        "@@id": "{{ url('/') }}#business",
-        "name": "Aromat",
-        "description": "Sri Lanka's trusted natural and organic baby food brand offering safe, nutritious, and affordable food for babies from 6 months onward.",
-        "url": "{{ url('/') }}",
-        "telephone": "+94743388370",
-        "email": "shop@aromat.lk",
-        "priceRange": "LKR",
-        "logo": {
-            "@@type": "ImageObject",
-            "url": "{{ asset('assets/images/logo/icons_img.webp') }}",
-            "width": 200,
-            "height": 80
-        },
-        "image": {
-            "@@type": "ImageObject",
-            "url": "{{ asset('assets/images/logo/og_image_2.webp') }}",
-            "width": 1200,
-            "height": 630
-        },
-        "address": {
-            "@@type": "PostalAddress",
-            "streetAddress": "No 51/B Wetara",
-            "addressLocality": "Polgasowita",
-            "addressRegion": "Western Province",
-            "addressCountry": "LK"
-        },
-        "openingHoursSpecification": [
-            {
-                "@@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
-            },
-            {
-                "@@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "09:00",
-                "closes": "13:00"
-            }
-        ],
-        "sameAs": [
-            "https://www.facebook.com/AromatSriLanka",
-            "https://www.instagram.com/aromat_lk"
-        ]
-    }
-    </script>
-
-    <!-- CSS deferred — preloader covers unstyled content while these download in parallel -->
-    <link rel="preload" as="style" href="assets/css/bootstrap.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/bootstrap.css"></noscript>
-    <link rel="preload" as="style" href="assets/css/owl.carousel.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/owl.carousel.css"></noscript>
-    <link rel="preload" as="style" href="assets/css/shortcodes.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/shortcodes.css"></noscript>
-    <link rel="preload" as="style" href="assets/css/style.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
-    <link rel="preload" as="style" href="assets/css/responsive.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/responsive.css"></noscript>
-
-    <!-- Deferred CSS — header uses inline SVGs so FA icons are never needed for initial paint -->
-    <link rel="preload" as="style" href="assets/css/font-awesome.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/font-awesome.css"></noscript>
-
-    <!-- animate.css is scroll-animation only — safe to load async -->
-    <link rel="preload" as="style" href="assets/css/animate.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/animate.css"></noscript>
-
-    @stack('styles')
-
-    <!-- Critical CSS: renders the preloader before any external stylesheet loads -->
-    <style>
-        .preload{width:100%;height:100%;background:#fff;position:fixed;top:0;bottom:0;right:0;left:0;z-index:99999999999;display:flex;align-items:center;justify-content:center;overflow:hidden}
-        .preload-logo{width:clamp(120px,20vw,220px);height:clamp(120px,20vw,220px);background-image:url('{{ asset('assets/images/logo/Logo_01.webp') }}');background-repeat:no-repeat;background-position:center;background-size:contain;animation:bounce 1.5s linear infinite}
-        @keyframes bounce{from,20%,53%,80%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1);transform:translate3d(0,0,0)}40%,43%{animation-timing-function:cubic-bezier(.755,.05,.855,.06);transform:translate3d(0,-30px,0)}70%{animation-timing-function:cubic-bezier(.755,.05,.855,.06);transform:translate3d(0,-15px,0)}90%{transform:translate3d(0,-4px,0)}}
-    </style>
-
-    <style>
-        /* Header icon colors */
-        .home2     .header-icon-btn { color: #4a7c3f !important; } /* home page (white header) â†’ navy */
-        .inner-page .header-icon-btn { color: #ffffff !important; } /* other pages (dark header) â†’ white */
-        /* Scrolled fixed header (white bg) â†’ always navy */
-        #site-header.is-fixed .header-icon-btn { color: #4a7c3f !important; }
-        /* Also force the SVG stroke directly */
-        .home2     .header-icon-btn svg { stroke: #4a7c3f !important; }
-        .inner-page .header-icon-btn svg { stroke: #ffffff !important; }
-        #site-header.is-fixed .header-icon-btn svg { stroke: #4a7c3f !important; }
-        /* Active page icon â†’ --primary-color3 (#f5c518) */
-        .header-icon-btn.active,
-        .header-icon-btn.active svg { color: var(--primary-color3) !important; stroke: var(--primary-color3) !important; }
-
-        /* Inner pages: logo and phone icon are green on green hero — invert to white until header is fixed */
-        .inner-page #site-header:not(.is-fixed) .logo-main,
-        .inner-page #site-header:not(.is-fixed) .header-contact svg {
-            filter: brightness(0) invert(1) !important;
-        }
-
-        /* Mobile: shift header-right left to avoid overlapping the hamburger button (20px wide at right:15px) */
-        @@media only screen and (max-width: 991px) {
-            .header-right { right: 45px !important; }
-        }
-        html { scroll-behavior: smooth; }
-    </style>
+    <title>Rivora - Luxury Hotel Booking HTML Template</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="" name="description" >
+    <meta content="" name="keywords" >
+    <meta content="" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css" >
+    <link href="css/swiper.css" rel="stylesheet" type="text/css" >
+    <link href="css/swiper-custom-1.css" rel="stylesheet" type="text/css" >
+    <link href="css/daterangepicker.css" rel="stylesheet" type="text/css" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
 
 </head>
 
-<body class="counter-scroll header-fixed @yield('body-class', 'home2')">
+<body>
 
-    <!-- Preloader -->
-    <div id="preload" class="preload">
-        <div class="preload-logo"></div>
-    </div>
+    <header class="header-light transparent">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="de-flex">
+                        <div class="de-flex-col">
+                            <!-- logo begin -->
+                            <div id="logo">
+                                <a href="index.html">
+                                    <img class="logo-main" src="images/logo-black.webp" alt="" >
+                                    <img class="logo-scroll" src="images/logo-black.webp" alt="" >
+                                    <img class="logo-mobile" src="images/logo-black.webp" alt="" >
+                                </a>
+                            </div>
+                            <!-- logo close -->
+                        </div>
 
-    <div id="wrapper">
-        <div id="page" class="clearfix">
-            <div class="top-bar">
-                <div class="inner jus-ct">
-                    <p class="clr-pri-1">Working Hours : Mon - Sat, 09:00 am - 06:00 pm</p>
+                        <div class="de-flex-col">
+                            <div class="de-flex-col header-col-mid">
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="#">Home</a>
+                                        <ul class="mega">
+                                            <li>
+                                                <div class="container">
+                                                    <div class="sb-menu p-4">
+                                                        <div class="row g-4 justify-content-center">
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="homepage-6.html">
+                                                                        <img src="images/demo/homepage-6.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3 new">Homepage 6</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="index.html">
+                                                                        <img src="images/demo/homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Homepage 1</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="homepage-2.html">
+                                                                        <img src="images/demo/homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Homepage 2</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="homepage-3.html">
+                                                                        <img src="images/demo/homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Homepage 3</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="homepage-4.html">
+                                                                        <img src="images/demo/homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Homepage 4</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="homepage-5.html">
+                                                                        <img src="images/demo/homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Homepage 5</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="sidebar-index.html">
+                                                                        <img src="images/demo/sidebar-homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Sidebar Homepage 1</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="sidebar-homepage-2.html">
+                                                                        <img src="images/demo/sidebar-homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Sidebar Homepage 2</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="sidebar-homepage-3.html">
+                                                                        <img src="images/demo/sidebar-homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Sidebar Homepage 3</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="sidebar-homepage-4.html">
+                                                                        <img src="images/demo/sidebar-homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Sidebar Homepage 4</h6>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
+                                                                    <a class="p-0" href="sidebar-homepage-5.html">
+                                                                        <img src="images/demo/sidebar-homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
+                                                                    </a>
+                                                                </div>
+                                                                <h6 class="mt-3">Sidebar Homepage 5</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="menu-item" href="rooms.html">Rooms</a>
+                                        <ul>
+                                            <li><a class="menu-item" href="rooms.html">Rooms Default</a></li>
+                                            <li><a class="menu-item new" href="rooms-interactive.html">Interactive</a></li>
+                                            <li><a class="menu-item new" href="rooms-grid.html">Rooms Grid</a></li>
+                                            <li><a class="menu-item" href="rooms-list.html">Rooms List</a></li>
+                                            <li><a class="menu-item" href="rooms-split.html">Rooms Split</a></li>
+                                            <li><a class="menu-item" href="rooms-slider.html">Rooms Slider</a></li>
+                                            <li><a class="menu-item" href="room-single.html">Single Room</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="menu-item" href="reservation.html">Reservation</a></li>
+                                    <li><a class="menu-item" href="#">Pages</a>
+                                        <ul>
+                                            <li><a class="menu-item" href="about.html">About Us</a></li>
+                                            <li><a class="menu-item" href="facilities.html">Facilities</a></li>
+                                            <li><a class="menu-item" href="offers.html">Offers</a></li>
+                                            <li><a class="menu-item" href="gallery.html">Gallery</a></li>
+                                            <li><a class="menu-item" href="gallery-carousel.html">Gallery Carousel</a></li>
+                                            <li><a class="menu-item" href="testimonials.html">Testimonials</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="menu-item" href="blog.html">Blog</a></li>
+                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="de-flex-col">
+                            <div class="menu_side_area">
+                                <a href="reservation.html" class="btn-main fx-slide hover-white"><span>Reservation</span></a>
+                                <span id="menu-btn"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <a href="#" id="back-to-top"></a>
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+        
+        <section class="text-light no-top no-bottom relative rounded-1 overflow-hidden mt-80 mt-sm-50 mx-2">
+            <div class="mh-800">
+                <div class="abs bottom-10 w-100 p-5 mt-3 z-3">
+                    <div class="container-fluid">
+                        <div class="row g-4 justify-content-between align-items-end">
+                            <div class="col-md-10">
+                                <h1 class="fs-96 lh-1 fs-xs-10vw wow fadeInUp mb-2">Experience the Ultimate Harmony of Luxury</h1>
+                            </div>
+                            <div class="col-md-6 offset-md-1">
+                                <p class="col-md-8 text-white wow fadeInUp" data-wow-delay=".4s">Make your vacation unforgettable with the perfect blend of luxury and comfort designed for total relaxation.</p>
+                                <a href="rooms.html" class="btn-main fx-slide hover-white wow fadeInUp" data-wow-delay=".8s"><span>Explore Room</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide text-light">
+                        <div class="swiper-inner" data-bgimage="url(images/slider/3.webp)">
+                            <div class="sw-overlay op-6"></div>
+                        </div>
+                    </div>
+
+                    <!-- Slides -->
+                    <div class="swiper-slide text-light">
+                        <div class="swiper-inner" data-bgimage="url(images/slider/4.webp)">
+                            <div class="sw-overlay op-6"></div>
+                        </div>
+                    </div>
+                    
+
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+
                 </div>
             </div>
 
-            <!-- header begin -->
-            @include('frontend.components.header')
-            <!-- header close -->
+        </section>
 
-            @yield('content')
+        <section>
+            <div class="container">
 
-            <!-- footer begin -->
-            @include('frontend.components.footer')
-            <!-- footer close -->
+                <div class="row g-4 mb-4 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="subtitle mb-0 id-color wow fadeInUp" data-wow-delay=".0s">Enjoy Your Stay</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Explore Room</h2>
+                        <p class="cwow fadeInUp" data-wow-delay=".4s">
+                            Discover a curated selection of elegant rooms designed for comfort. From cozy spaces to refined suites, every detail is crafted for a relaxing stay.
+                        </p>
+                    </div>
+                </div>
 
-    </div>
-    </div>
-    <!-- /#wrapper -->
+                <div class="row g-4">
 
-    <a id="scroll-top"></a>
+                    <div class="col-md-6">
+                        <a href="room-single.html" class="d-block h-100 hover relative">
+                            <div class="rounded-1 overflow-hidden">
+                                <img src="images/rooms/1.webp" class="w-100 hover-scale-1-2" alt="">
+                            </div>
+                            <div class="pt-4">
+                                <div class="d-flex mb-2 fs-15 justify-content-between">
+                                    <div class="d-flex">    
+                                        <div class="d-flex align-items-center me-3">
+                                            <img src="images/ui/user.webp" class="w-15px me-2" alt="">2 guests
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/ui/floorplan.webp" class="w-15px me-2" alt="">28 ft
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="fs-20 fw-bold">$109</div><span>/night</span>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <h3 class="mb-2">Standard Room</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-    <!-- Javascript -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/plugin.js"></script>
-    <script src="assets/js/countto.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/owl.carousel2.thumbs.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/shortcodes.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+                    <div class="col-md-6">
+                        <a href="room-single.html" class="d-block h-100 hover relative">
+                            <div class="rounded-1 overflow-hidden">
+                                <h3 class="abs bg-color rounded-3 text-white fs-20 lh-1 p-2 px-3 m-4 top-0 start-0 z-3">Best Selling</h3>
+                                <img src="images/rooms/2.webp" class="w-100 hover-scale-1-2" alt="">
+                            </div>
+                            <div class="pt-4">
+                                <div class="d-flex mb-2 fs-15 justify-content-between">
+                                    <div class="d-flex">    
+                                        <div class="d-flex align-items-center me-3">
+                                            <img src="images/ui/user.webp" class="w-15px me-2" alt="">2 guests
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/ui/floorplan.webp" class="w-15px me-2" alt="">28 ft
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="fs-20 fw-bold">$129</div><span>/night</span>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <h3 class="mb-2">Superior Room</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>           
 
-    <!-- Toast Alert System -->
-    <div id="aromat-toast-container" style="
-        position: fixed;
-        bottom: 28px;
-        right: 28px;
-        z-index: 99999;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        pointer-events: none;
-    "></div>
+                    <div class="col-md-6">
+                        <a href="room-single.html" class="d-block h-100 hover relative">
+                            <div class="rounded-1 overflow-hidden">
+                                <img src="images/rooms/3.webp" class="w-100 hover-scale-1-2" alt="">
+                            </div>
+                            <div class="pt-4">
+                                <div class="d-flex mb-2 fs-15 justify-content-between">
+                                    <div class="d-flex">    
+                                        <div class="d-flex align-items-center me-3">
+                                            <img src="images/ui/user.webp" class="w-15px me-2" alt="">2 guests
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/ui/floorplan.webp" class="w-15px me-2" alt="">28 ft
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="fs-20 fw-bold">$149</div><span>/night</span>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <h3 class="mb-2">Executive Room</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-    <style>
-    .aromat-toast {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 13px 18px;
-        border-radius: 12px;
-        font-family: 'Mulish', sans-serif;
-        font-size: 13px;
-        font-weight: 700;
-        color: #666;
-        background: #fff;
-        border: 1.5px solid #ddd;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        pointer-events: all;
-        opacity: 0;
-        transform: translateY(12px);
-        transition: opacity .28s ease, transform .28s ease;
-        min-width: 220px;
-        max-width: 320px;
-    }
-    .aromat-toast.show { opacity: 1; transform: translateY(0); }
-    .aromat-toast.hide { opacity: 0; transform: translateY(12px); }
-    .aromat-toast__icon { font-size: 16px; flex-shrink: 0; color: #aaa; }
-    .aromat-toast__msg  { flex: 1; }
-    </style>
+                    <div class="col-md-6">
+                        <a href="room-single.html" class="d-block h-100 hover relative">
+                            <div class="rounded-1 overflow-hidden">
+                                <img src="images/rooms/4.webp" class="w-100 hover-scale-1-2" alt="">
+                            </div>
+                            <div class="pt-4">
+                                <div class="d-flex mb-2 fs-15 justify-content-between">
+                                    <div class="d-flex">    
+                                        <div class="d-flex align-items-center me-3">
+                                            <img src="images/ui/user.webp" class="w-15px me-2" alt="">2 guests
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/ui/floorplan.webp" class="w-15px me-2" alt="">28 ft
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="fs-20 fw-bold">$179</div><span>/night</span>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <h3 class="mb-2">Premium Suite</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-    <script>
-    function showToast(message, type) {
-        type = type || 'cart';
-        var icons = { cart: '&#128722;', wishlist: '&#10084;', error: '&#9888;' };
-        var container = document.getElementById('aromat-toast-container');
-        var toast = document.createElement('div');
-        toast.className = 'aromat-toast aromat-toast--' + type;
-        toast.innerHTML =
-            '<span class="aromat-toast__icon">' + (icons[type] || icons.cart) + '</span>' +
-            '<span class="aromat-toast__msg">' + message + '</span>';
-        container.appendChild(toast);
-        requestAnimationFrame(function () {
-            requestAnimationFrame(function () { toast.classList.add('show'); });
-        });
-        setTimeout(function () {
-            toast.classList.add('hide');
-            toast.classList.remove('show');
-            setTimeout(function () { toast.remove(); }, 320);
-        }, 3000);
-    }
+                    <div class="col-lg-12 text-center">
+                        <a href="rooms.html" class="btn-main fx-slide hover-white"><span>View More Rooms</span></a>
+                    </div>            
 
-    // Global header badge updaters
-    window.updateCartBadge = function (count) {
-        var b = document.getElementById('cart-count-badge');
-        if (!b) return;
-        b.textContent = count;
-        b.style.display = count > 0 ? 'flex' : 'none';
-    };
-    window.updateWishlistBadge = function (count) {
-        var b = document.getElementById('wishlist-count-badge');
-        if (!b) return;
-        b.textContent = count;
-        b.style.display = count > 0 ? 'flex' : 'none';
-    };
-    </script>
+                </div>
+            </div>
+        </section>
 
-    @stack('scripts')
+
+        <section class="text-light jarallax mx-2 rounded-1 overflow-hidden">
+            <img src="images/background/1.webp" class="jarallax-img" alt="">
+            <div class="sw-overlay op-6"></div>
+            <div class="container relative z-2">
+                <div class="row g-4 gx-5 align-items-center">
+                    <div class="col-lg-5 text-center">
+                        <h2 class="fs-96 mb-0">4.9</h2>
+                        <span class="d-stars id-color d-block wow fadeInUp">
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </span>
+                        (300+ Reviews)
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="owl-single-dots owl-carousel owl-theme">
+                            
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-40">A truly outstanding stay — warm service, beautiful rooms, and an atmosphere that feels unforgettable.</h3>
+                                <span class="wow fadeInUp">Anna L., Paris</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-40">Everything exceeded expectations — from the amenities to the staff, truly a memorable hotel experience.</h3>
+                                <span class="wow fadeInUp">Michael H., Toronto</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-40">Impeccable attention to detail. Every moment felt personal and thoughtfully crafted during our stay.</h3>
+                                <span class="wow fadeInUp">Nadia R., Dubai</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-40">From check-in to check-out, the experience was effortless and luxurious. Highly recommended.</h3>
+                                <span class="wow fadeInUp">Tom S., Los Angeles</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-40">Beautiful interiors, friendly staff, and great location. We loved every moment of our vacation.</h3>
+                                <span class="wow fadeInUp">Elise K., Amsterdam</span>
+                            </div>
+
+                            <div class="item">
+                                <span class="d-stars id-color d-block mb-3">
+                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
+                                </span>
+                                <h3 class="mb-4 wow fadeInUp fs-40">Exceptional hospitality and comfort. The perfect choice for a relaxing and refreshing getaway.</h3>
+                                <span class="wow fadeInUp">David M., Singapore</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+                <div class="row g-4 mb-4 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="subtitle id-color wow fadeInUp" data-wow-delay=".0s">Welcome to Rivora</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Hotel Facilities</h2>
+                        <p class="cwow fadeInUp" data-wow-delay=".4s">
+                            From premium rooms to full-service amenities, our team ensures a comfortable and memorable stay from check-in to check-out.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="h-100 rounded-1 mh-300 wow fadeInUp" data-bgimage="url(images/misc/s1.webp) center"></div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="row g-4">
+
+                            <!-- TOTAL ROOMS -->
+                            <div class="col-md-6 wow fadeInUp" data-wow-delay=".0s">
+                                <div class="p-30 bg-white rounded-1 h-100">
+                                    <small class="text-uppercase border-bottom d-block">TOTAL ROOMS</small>
+                                    <div class="sm-hide spacer-double"></div>
+                                    <div class="spacer-double"></div>
+                                    <h2 class="mb-0">
+                                        <span class="timer" data-to="180" data-speed="3000">0</span>
+                                        <span class="id-color">+</span>
+                                    </h2>
+                                    luxury rooms & suites
+                                </div>
+                            </div>
+
+                            <!-- YEARLY VISITORS -->
+                            <div class="col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                                <div class="p-30 bg-white rounded-1 h-100">
+                                    <small class="text-uppercase border-bottom d-block">YEARLY VISITORS</small>
+                                    <div class="sm-hide spacer-double"></div>
+                                    <div class="spacer-double"></div>
+                                    <h2 class="mb-0">
+                                        <span class="timer" data-to="8500" data-speed="3000">0</span>
+                                        <span class="id-color">+</span>
+                                    </h2>
+                                    happy guests
+                                </div>
+                            </div>
+
+                            <!-- RESTAURANT MENU ITEMS -->
+                            <div class="col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                <div class="p-30 bg-white rounded-1 h-100">
+                                    <small class="text-uppercase border-bottom d-block">SIGNATURE MENU</small>
+                                    <div class="sm-hide spacer-double"></div>
+                                    <div class="spacer-double"></div>
+                                    <h2 class="mb-0">
+                                        <span class="timer" data-to="65" data-speed="3000">0</span>
+                                        <span class="id-color">+</span>
+                                    </h2>
+                                    curated dishes & beverages
+                                </div>
+                            </div>
+
+                            <!-- STAFF COUNT / SERVICE IMAGE -->
+                            <div class="col-md-6 wow fadeInUp sm-hide d-md-block d-xs-none" data-wow-delay=".6s">
+                                <div class="p-30 bg-dark-2 rounded-1 h-100" data-bgimage="url(images/misc/s2.webp) center">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-color-op-1 rounded-1 mx-2">
+            <div class="container">
+                <div class="row g-4 gx-5 align-items-center justify-content-between">
+                    <div class="col-lg-6">
+                        <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Welcome</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Experience Comfort, Elegance, and Exceptional Hospitality</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="wow fadeInUp" data-wow-delay=".4s">
+                            Welcome to our hotel, where comfort meets refined elegance in a setting designed for relaxation and unforgettable stays. 
+                            Located in a prime destination, our property offers thoughtfully designed rooms, modern amenities, and warm hospitality 
+                            tailored to every traveler. From peaceful mornings to restful nights, every detail is carefully crafted to ensure your stay 
+                            is seamless, comfortable, and truly memorable.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="spacer-single"></div>
+
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                      <ul id="filters" class="wow fadeInUp" data-wow-delay="0s">
+                        <li><a href="#" data-filter="*" class="selected">View All</a></li>
+                          <li><a href="#" data-filter=".rooms">Rooms</a></li>
+                          <li><a href="#" data-filter=".dining">Dining</a></li>
+                          <li><a href="#" data-filter=".facilities">Facilities</a><li>
+                      </ul>
+                  </div>
+                </div>
+
+                <div id="gallery" class="row g-3 wow fadeIn" data-wow-delay=".3s">
+
+                    <div class="col-md-3 col-sm-6 col-12 item rooms">
+                      <a href="images/gallery/1.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/1.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item dining">
+                      <a href="images/gallery/6.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/6.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item facilities">
+                      <a href="images/gallery/9.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/9.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item rooms">
+                      <a href="images/gallery/3.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/3.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item dining">
+                      <a href="images/gallery/8.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/8.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item rooms">
+                      <a href="images/gallery/5.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/5.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item facilities">
+                      <a href="images/gallery/11.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/11.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item rooms">
+                      <a href="images/gallery/2.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/2.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item facilities">
+                      <a href="images/gallery/10.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/10.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item rooms">
+                      <a href="images/gallery/4.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/4.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item dining">
+                      <a href="images/gallery/7.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/7.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 item facilities">
+                      <a href="images/gallery/12.webp" class="image-popup d-block hover">
+                          <div class="relative overflow-hidden rounded-1">
+                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                              <img src="images/gallery/12.webp" class="w-100 hover-scale-1-2" alt="">
+                          </div>
+                      </a>
+                    </div>
+
+                    </div>
+            </div>
+        </section>
+
+        <section aria-label="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bg-white p-40 rounded-1">
+                            <form name="contactForm" id="contact_form" method="post" action="#">
+                                <div class="row g-4 align-items-end">
+                                    
+                                    <div class="col-md-1-5">
+                                        <div class="fs-18 text-dark fw-500 mb-10">Check In</div>
+                                        <input type="text" id="checkin" class="form-control" required>
+                                    </div>
+
+                                    <div class="col-md-1-5">
+                                        <div class="fs-18 text-dark fw-500 mb-10">Check Out</div>
+                                        <input type="text" id="checkout" class="form-control" required>
+                                    </div>
+
+                                    <div class="col-md-1-5">
+                                        <div class="fs-18 text-dark fw-500 mb-10">Rooms</div>
+                                        <select name="rooms" id="rooms" class="form-control">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-1-5">
+                                        <div class="fs-18 text-dark fw-500 mb-10">Guests</div>
+                                        <select name="guests" id="guests" class="form-control">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="col-md-1-5">
+                                        <div id='submit'>
+                                            <input type='submit' id='send_message' value='Check Availability' class="btn-main w-100">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-color-op-1 rounded-1 mx-2">
+            <div class="container">
+                <div class="row g-4 mb-2 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="subtitle id-color wow fadeInUp">Exclusive Deals</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Latest Hotel Offers</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="overflow-hidden rounded-1">
+                            <div class="hover relative">
+                                <h3 class="abs bg-color rounded-3 text-white fs-20 lh-1 p-2 px-3 m-4 top-0 start-0 z-3">20% OFF</h3>
+                                <img src="images/offers/1.webp" class="w-100 hover-scale-1-1" alt="">
+                                <a href="offer-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            </div>
+                            <div class="p-40 bg-dark-2 text-light relative">
+                                <a class="text-white" href="offers.html">
+                                    <h3>Romantic Stay</h3>
+                                    <p>20% Off Weekend Packages</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="overflow-hidden rounded-1">
+                            <div class="p-40 bg-dark-2 text-light relative">
+                                <a class="text-white" href="offers.html">
+                                    <h3>Early Bird Deal</h3>
+                                    <p>Save Up to 30% on Rooms</p>
+                                </a>
+                            </div>
+                            <div class="hover relative">
+                                <h3 class="abs bg-color rounded-3 text-white fs-20 lh-1 p-2 px-3 m-4 bottom-0 start-0 z-3">30% OFF</h3>
+                                <img src="images/offers/2.webp" class="w-100 hover-scale-1-1" alt="">
+                                <a href="offer-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="overflow-hidden rounded-1">
+                            <div class="hover relative">
+                                <img src="images/offers/3.webp" class="w-100 hover-scale-1-1" alt="">
+                                <a href="offer-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            </div>
+                            <div class="p-40 bg-dark-2 text-light relative">
+                                <a class="text-white" href="offers.html">
+                                    <h3>Family Getaway</h3>
+                                    <p>Kids Stay & Eat Free</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+                <div class="row g-4 gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="subtitle id-color">FAQ</div>
+                        <h2 class="wow fadeInUp">
+                            Everything You Need to Know About Staying With Us
+                        </h2>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="accordion title-boxed wow fadeInUp">
+                            <div class="accordion-section">
+
+                                <div class="accordion-section-title" data-tab="#accordion-b1">
+                                    What time is check-in and check-out?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b1">
+                                    <p class="mb-0">
+                                        Check-in starts at 2:00 PM and check-out is at 12:00 PM. Early check-in and late check-out are available upon request and subject to availability.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b2">
+                                    Do you offer airport pick-up or shuttle service?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b2">
+                                    <p class="mb-0">
+                                        Yes, we provide airport transfers and private shuttle services. Please contact us in advance to arrange transportation.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b3">
+                                    Are pets allowed in the hotel?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b3">
+                                    <p class="mb-0">
+                                        We welcome small pets in designated pet-friendly rooms. Additional cleaning fees may apply.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b4">
+                                    Do you have free Wi-Fi?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b4">
+                                    <p class="mb-0">
+                                        Yes, complimentary high-speed Wi-Fi is available throughout the hotel, including rooms and public areas.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b5">
+                                    What facilities are available for guests?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b5">
+                                    <p class="mb-0">
+                                        Guests can enjoy our swimming pool, fitness center, spa, restaurant, lounge bar, and business center. Facility access varies by room type.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-section-title" data-tab="#accordion-b6">
+                                    Do you offer breakfast?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-b6">
+                                    <p class="mb-0">
+                                        Yes, we offer daily breakfast with continental and international options. Breakfast is included for certain room packages.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="p-0 mx-2" aria-label="section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a class="d-block hover popup-youtube overflow-hidden rounded-1" href="https://www.youtube.com/watch?v=C6rf51uHWJg">
+                            <div class="relative overflow-hidden">
+                                <div class="absolute start-0 w-100 abs-middle fs-36 text-white text-center z-2">
+                                    <div class="player bg-color no-border circle wow scaleIn"><span></span></div>
+                                </div> 
+                                <div class="absolute w-100 h-100 top-0 bg-dark hover-op-05"></div>
+                                <img src="images/background/2.webp" class="w-100 hover-scale-1-1" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row g-4 mb-2 justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="subtitle id-color wow fadeInUp">Our Blog</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">News &amp; Articles</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-xl-3 col-lg-6">
+                    <div class="overflow-hidden">
+                        <div class="hover relative">
+                            <div class="abs z-2 bg-blur text-white p-3 pb-2 m-4 text-center fw-600 rounded-3">
+                                <div class="fs-36 fw-bold lh-1">20</div>
+                                <span>Jun</span>
+                            </div>
+                            <div class="rounded-1 overflow-hidden">
+                                <img src="images/blog/1.jpg" class="w-100 hover-scale-1-1" alt="">
+                            </div>
+                            <a href="blog-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                        </div>
+
+                        <div class="pt-4 relative">
+                            <a href="blog-single.html">
+                                <h3>Top Hotel Amenities That Guests Love in 2025 Trends</h3>
+                            </a>
+                            <p>From smart-room technology to wellness features that elevate guest comfort and overall satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="overflow-hidden">
+                        <div class="hover relative">
+                            <div class="abs z-2 bg-blur text-white p-3 pb-2 m-4 text-center fw-600 rounded-3">
+                                <div class="fs-36 fw-bold lh-1">19</div>
+                                <span>Jun</span>
+                            </div>
+                            <div class="rounded-1 overflow-hidden">
+                                <img src="images/blog/2.jpg" class="w-100 hover-scale-1-1" alt="">
+                            </div>
+                            <a href="blog-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                        </div>
+
+                        <div class="pt-4 relative">
+                            <a href="blog-single.html">
+                                <h3>How to Choose the Perfect Room for Your Stay</h3>
+                            </a>
+                            <p>Learn how to choose the ideal hotel room based on comfort, layout, and travel needs for a better stay.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="overflow-hidden">
+                        <div class="hover relative">
+                            <div class="abs z-2 bg-blur text-white p-3 pb-2 m-4 text-center fw-600 rounded-3">
+                                <div class="fs-36 fw-bold lh-1">18</div>
+                                <span>Jun</span>
+                            </div>
+                            <div class="rounded-1 overflow-hidden">
+                                <img src="images/blog/3.jpg" class="w-100 hover-scale-1-1" alt="">
+                            </div>
+                            <a href="blog-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                        </div>
+
+                        <div class="pt-4 relative">
+                            <a href="blog-single.html">
+                                <h3>The Art of Hospitality: Behind Our Signature Services</h3>
+                            </a>
+                            <p>Discover the thoughtful services and attention to detail that define exceptional hospitality experiences.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6">
+                    <div class="overflow-hidden">
+                        <div class="hover relative">
+                            <div class="abs z-2 bg-blur text-white p-3 pb-2 m-4 text-center fw-600 rounded-3">
+                                <div class="fs-36 fw-bold lh-1">17</div>
+                                <span>Jun</span>
+                            </div>
+                            <div class="rounded-1 overflow-hidden">
+                                <img src="images/blog/4.jpg" class="w-100 hover-scale-1-1" alt="">
+                            </div>
+                            <a href="blog-single.html" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                        </div>
+
+                        <div class="pt-4 relative">
+                            <a href="blog-single.html">
+                                <h3>Why Location Matters: Choosing a Hotel for Your Next Trip</h3>
+                            </a>
+                            <p>See how hotel location impacts convenience, accessibility, and overall travel experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-light section-dark m-2 mt-0 rounded-1">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12">
+                    <div class="d-lg-flex align-items-center justify-content-between text-center">
+                        <div>
+                            <h3 class="fs-20">Address</h3>
+                            742 Evergreen Terrace<br>
+                            Brooklyn, NY 11201
+                        </div>
+                        <div>
+                            <img src="images/logo-white.webp" class="w-150px" alt=""><br>
+                            <div class="social-icons mb-sm-30 mt-4">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+
+                        </div>
+                        <div>
+                            <h3 class="fs-20">Contact Us</h3>
+                            T. +929 333 9296<br>
+                            M. contact@rivora.com
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        Copyright 2026 - Rivora by Designesia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+
+    <!-- swiper slider -->
+    <script src="js/swiper.js"></script>
+    <script src="js/custom-swiper-1.js"></script>
+
+    <!-- form -->
+    <script src="js/moment.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/custom-datepicker.js"></script>
+
 </body>
 
 </html>
