@@ -14,7 +14,7 @@
                                     </p>
                                 </div>
                                 <div class="col-lg-3 text-lg-end">
-                                    <a href="#" class="btn-main fx-slide wow fadeInUp" data-wow-delay=".6s"><span>Contact Our Team</span></a>
+                                    <a href="{{ route('contact') }}" class="btn-main fx-slide wow fadeInUp" data-wow-delay=".6s"><span>Contact Our Team</span></a>
                                 </div>
                             </div>
 
