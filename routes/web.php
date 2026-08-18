@@ -7,6 +7,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\TermsController;
+use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\FaqController;
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -28,3 +31,12 @@ Route::get('/testimonial', [TestimonialController::class, 'index'])->name('testi
 
 // Gallery Page
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
+
+// Terms and Conditions Page
+Route::get('/terms-and-conditions', [TermsController::class, 'index'])->name('terms');
+
+// Privacy Policy Page
+Route::get('/privacy-policy', [PrivacyController::class, 'index'])->name('privacy');
+
+// FAQ Page
+Route::get('/faq', [FaqController::class, 'index'])->name('faq');

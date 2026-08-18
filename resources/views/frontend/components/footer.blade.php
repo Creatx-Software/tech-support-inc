@@ -32,6 +32,10 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         Copyright © {{ date('Y') }} Tech Support Inc. All rights reserved.
+                        <span class="mx-2">|</span>
+                        <a href="{{ route('terms') }}">Terms &amp; Conditions</a>
+                        <span class="mx-2">|</span>
+                        <a href="{{ route('privacy') }}">Privacy Policy</a>
                         <div style="font-size: 12px;">Designed and developed by <a href="https://creatxsoftware.com/" target="_blank" rel="noopener" class="creatx-link">CreatX Software.</a></div>
                     </div>
                 </div>
