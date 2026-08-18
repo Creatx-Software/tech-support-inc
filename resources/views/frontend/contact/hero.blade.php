@@ -4,7 +4,7 @@
             <div class="container relative z-2">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center">
-                        <div class="subtitle id-color wow fadeInUp mb-2">Enjoy Your Stay</div>
+                        <div class="subtitle id-color wow fadeInUp mb-2">We're Here to Help</div>
                         <div class="clearfix"></div>
                         <h2 class="fs-60 fs-xs-8vw wow fadeInUp" data-wow-delay=".4s">Contact</h2>
                     </div>

@@ -41,7 +41,7 @@
                                             <li><a class="menu-item" href="testimonials.html">Testimonials</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="menu-item" href="blog.html">Blog</a></li>
+                                    <li><a class="menu-item" href="{{ route('blog') }}">Blog</a></li>
                                     <li><a class="menu-item" href="{{ route('contact') }}">Contact</a></li>
                                 </ul>
                             </div>
