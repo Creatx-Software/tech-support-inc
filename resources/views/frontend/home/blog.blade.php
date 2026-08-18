@@ -19,11 +19,11 @@
                             <div class="rounded-1 overflow-hidden">
                                 <img src="/assets/images/blog/pexels-jep-gambardella-7690080.jpg" class="w-100 hover-scale-1-1" alt="">
                             </div>
-                            <a href="#" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            <a href="{{ route('blogdetail') }}" class="d-block abs w-100 h-100 top-0 start-0"></a>
                         </div>
 
                         <div class="pt-4 relative">
-                            <a href="#">
+                            <a href="{{ route('blogdetail') }}">
                                 <h3>Top Cybersecurity Threats Small Businesses Face in 2025</h3>
                             </a>
                             <p>From phishing to ransomware, here's what small businesses need to watch for and how managed IT support can help.</p>
@@ -41,11 +41,11 @@
                             <div class="rounded-1 overflow-hidden">
                                 <img src="/assets/images/blog/pexels-jep-gambardella-7690080.jpg" class="w-100 hover-scale-1-1" alt="">
                             </div>
-                            <a href="#" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            <a href="{{ route('blogdetail') }}" class="d-block abs w-100 h-100 top-0 start-0"></a>
                         </div>
 
                         <div class="pt-4 relative">
-                            <a href="#">
+                            <a href="{{ route('blogdetail') }}">
                                 <h3>How to Choose the Right IT Support Plan for Your Business</h3>
                             </a>
                             <p>Learn what to look for in a support plan based on your team size, budget, and how much you rely on technology.</p>
@@ -63,11 +63,11 @@
                             <div class="rounded-1 overflow-hidden">
                                 <img src="/assets/images/blog/pexels-jep-gambardella-7690080.jpg" class="w-100 hover-scale-1-1" alt="">
                             </div>
-                            <a href="#" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            <a href="{{ route('blogdetail') }}" class="d-block abs w-100 h-100 top-0 start-0"></a>
                         </div>
 
                         <div class="pt-4 relative">
-                            <a href="#">
+                            <a href="{{ route('blogdetail') }}">
                                 <h3>Behind the Helpdesk: How Our Support Process Works</h3>
                             </a>
                             <p>Discover the process and attention to detail that goes into resolving every ticket quickly and correctly.</p>
@@ -85,11 +85,11 @@
                             <div class="rounded-1 overflow-hidden">
                                 <img src="/assets/images/blog/pexels-jep-gambardella-7690080.jpg" class="w-100 hover-scale-1-1" alt="">
                             </div>
-                            <a href="#" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                            <a href="{{ route('blogdetail') }}" class="d-block abs w-100 h-100 top-0 start-0"></a>
                         </div>
 
                         <div class="pt-4 relative">
-                            <a href="#">
+                            <a href="{{ route('blogdetail') }}">
                                 <h3>Why Every Small Business Needs Regular Data Backups</h3>
                             </a>
                             <p>See how automated backups protect your business from data loss, ransomware, and costly downtime.</p>
