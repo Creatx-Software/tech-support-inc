@@ -1,7 +1,7 @@
         <section>
             <div class="container">
 
-                <div class="row g-4 mb-4 justify-content-center">
+                <div class="row g-4 mb-1 justify-content-center">
                     <div class="col-lg-6 text-center">
                         <div class="subtitle mb-0 id-color wow fadeInUp" data-wow-delay=".0s">What We Offer</div>
                         <h2 class="wow fadeInUp" data-wow-delay=".2s">Our IT Support Services</h2>
