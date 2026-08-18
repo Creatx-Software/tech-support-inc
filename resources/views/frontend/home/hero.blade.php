@@ -8,7 +8,7 @@
                             </div>
                             <div class="col-md-6 offset-md-1">
                                 <p class="col-md-8 text-white wow fadeInUp" data-wow-delay=".4s">Tech Support Inc keeps your systems secure, connected, and running smoothly — a trusted IT partner for small businesses across the UK.</p>
-                                <a href="#" class="btn-main fx-slide hover-white wow fadeInUp" data-wow-delay=".8s"><span>Get IT Support</span></a>
+                                <a href="{{ route('contact') }}" class="btn-main fx-slide hover-white wow fadeInUp" data-wow-delay=".8s"><span>Get IT Support</span></a>
                             </div>
                         </div>
                     </div>
