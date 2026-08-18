@@ -17,7 +17,7 @@
                             you can focus on running your business, not troubleshooting your technology. From day-to-day helpdesk requests to
                             long-term IT strategy, our team is there whenever you need us.
                         </p>
-                        <a class="btn-main fx-slide wow fadeInUp" data-wow-delay=".6s" href="#services"><span>Explore Our Services</span></a>
+                        <a class="btn-main fx-slide wow fadeInUp" data-wow-delay=".6s" href="{{ route('services') }}"><span>Explore Our Services</span></a>
 
                     </div>
                 </div>
