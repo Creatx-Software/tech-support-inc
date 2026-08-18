@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TestimonialController;
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -20,3 +21,6 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 // Blog Detail Page
 Route::get('/blogdetail', [BlogController::class, 'blogdetail'])->name('blogdetail');
+
+// Testimonial Page
+Route::get('/testimonial', [TestimonialController::class, 'index'])->name('testimonial');

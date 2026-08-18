@@ -31,9 +31,12 @@
                                         </ul>
                                     </li>
                                     <li><a class="menu-item" href="{{ route('about') }}">About</a></li>
-                                    <li><a class="menu-item" href="#">Pages</a>
+
+                                    <li><a class="menu-item" href="{{ route('blog') }}">Blog</a></li>
+                                    <li><a class="menu-item" href="{{ route('contact') }}">Contact</a></li>
+                                    <li><a class="menu-item" href="#">More</a>
                                         <ul>
-                                            <li><a class="menu-item" href="about.html">About Us</a></li>
+                                            <li><a class="menu-item" href="{{ route('testimonial') }}">Testimonials</a></li>
                                             <li><a class="menu-item" href="facilities.html">Facilities</a></li>
                                             <li><a class="menu-item" href="offers.html">Offers</a></li>
                                             <li><a class="menu-item" href="gallery.html">Gallery</a></li>
@@ -41,15 +44,13 @@
                                             <li><a class="menu-item" href="testimonials.html">Testimonials</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="menu-item" href="{{ route('blog') }}">Blog</a></li>
-                                    <li><a class="menu-item" href="{{ route('contact') }}">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="de-flex-col">
                             <div class="menu_side_area">
-                                <a href="reservation.html" class="btn-main fx-slide hover-white"><span>Reservation</span></a>
+                                <a href="{{ route('contact') }}" class="btn-main fx-slide hover-white"><span>Contact</span></a>
                                 <span id="menu-btn"></span>
                             </div>
                         </div>
