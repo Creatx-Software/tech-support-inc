@@ -30,10 +30,11 @@
                                     </li>
                                     <li><a class="menu-item" href="{{ route('about') }}">About</a></li>
 
-                                    <li><a class="menu-item" href="{{ route('blog') }}">Blog</a></li>
+                                    <li><a class="menu-item" href="{{ route('pricing') }}">Plans & Pricing</a></li>
                                     <li><a class="menu-item" href="{{ route('contact') }}">Contact</a></li>
                                     <li><a class="menu-item" href="#">More</a>
                                         <ul>
+                                            <li><a class="menu-item" href="{{ route('blog') }}">Blog</a></li>
                                             <li><a class="menu-item" href="{{ route('testimonial') }}">Testimonials</a></li>
                                             <li><a class="menu-item" href="{{ route('gallery') }}">Gallery</a></li>
                                             <li><a class="menu-item" href="{{ route('faq') }}">FAQ</a></li>

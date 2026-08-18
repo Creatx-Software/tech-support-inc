@@ -11,6 +11,7 @@ use App\Http\Controllers\TermsController;
 use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\PricingController;
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -47,3 +48,6 @@ Route::get('/services', [ServiceController::class, 'index'])->name('services');
 
 //services detail page
 Route::get('/servicesdetail', [ServiceController::class, 'servicesdetail'])->name('servicesdetail');
+
+// Pricing Page
+Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
