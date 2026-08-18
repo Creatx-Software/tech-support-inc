@@ -42,7 +42,7 @@
                                         </ul>
                                     </li>
                                     <li><a class="menu-item" href="blog.html">Blog</a></li>
-                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                    <li><a class="menu-item" href="{{ route('contact') }}">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

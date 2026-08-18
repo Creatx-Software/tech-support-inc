@@ -5,8 +5,8 @@
                     <div class="d-lg-flex align-items-center justify-content-between text-center">
                         <div>
                             <h3 class="fs-20">Address</h3>
-                            742 Evergreen Terrace<br>
-                            Brooklyn, NY 11201
+                            Level 01, 39 Fitzroy Square<br>
+                            London W1T 6EZ
                         </div>
                         <div>
                             <img src="/assets/images/logo-white.webp" class="w-150px" alt=""><br>
@@ -20,8 +20,8 @@
                         </div>
                         <div>
                             <h3 class="fs-20">Contact Us</h3>
-                            T. +929 333 9296<br>
-                            M. contact@rivora.com
+                            T. +44 7459 425326<br>
+                            M. info@techsupportinc.co.uk
                         </div>
                     </div>
                 </div>                    
