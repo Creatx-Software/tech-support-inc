@@ -30,7 +30,7 @@
                                             <li><a class="menu-item" href="room-single.html">Single Room</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="menu-item" href="reservation.html">Reservation</a></li>
+                                    <li><a class="menu-item" href="{{ route('about') }}">About</a></li>
                                     <li><a class="menu-item" href="#">Pages</a>
                                         <ul>
                                             <li><a class="menu-item" href="about.html">About Us</a></li>
