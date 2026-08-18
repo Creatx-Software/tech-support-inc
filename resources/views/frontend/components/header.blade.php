@@ -6,7 +6,7 @@
                         <div class="de-flex-col">
                             <!-- logo begin -->
                             <div id="logo">
-                                <a href="index.html">
+                                <a href="{{ route('home') }}">
                                     <img class="logo-main" src="/assets/images/logo-black.webp" alt="" >
                                     <img class="logo-scroll" src="/assets/images/logo-black.webp" alt="" >
                                     <img class="logo-mobile" src="/assets/images/logo-black.webp" alt="" >
@@ -18,116 +18,7 @@
                         <div class="de-flex-col">
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
-                                    <li><a class="menu-item" href="#">Home</a>
-                                        <ul class="mega">
-                                            <li>
-                                                <div class="container">
-                                                    <div class="sb-menu p-4">
-                                                        <div class="row g-4 justify-content-center">
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="homepage-6.html">
-                                                                        <img src="/assets/images/demo/homepage-6.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3 new">Homepage 6</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="index.html">
-                                                                        <img src="/assets/images/demo/homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Homepage 1</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="homepage-2.html">
-                                                                        <img src="/assets/images/demo/homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Homepage 2</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="homepage-3.html">
-                                                                        <img src="/assets/images/demo/homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Homepage 3</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="homepage-4.html">
-                                                                        <img src="/assets/images/demo/homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Homepage 4</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="homepage-5.html">
-                                                                        <img src="/assets/images/demo/homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Homepage 5</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="sidebar-index.html">
-                                                                        <img src="/assets/images/demo/sidebar-homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Sidebar Homepage 1</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="sidebar-homepage-2.html">
-                                                                        <img src="/assets/images/demo/sidebar-homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Sidebar Homepage 2</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="sidebar-homepage-3.html">
-                                                                        <img src="/assets/images/demo/sidebar-homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Sidebar Homepage 3</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="sidebar-homepage-4.html">
-                                                                        <img src="/assets/images/demo/sidebar-homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Sidebar Homepage 4</h6>
-                                                            </div>
-
-                                                            <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-                                                                <div class="relative hover text-center rounded-5 overflow-hidden soft-shadow">
-                                                                    <a class="p-0" href="sidebar-homepage-5.html">
-                                                                        <img src="/assets/images/demo/sidebar-homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <h6 class="mt-3">Sidebar Homepage 5</h6>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="menu-item" href="{{ route('home') }}">Home</a></li>
                                     <li><a class="menu-item" href="rooms.html">Rooms</a>
                                         <ul>
                                             <li><a class="menu-item" href="rooms.html">Rooms Default</a></li>
