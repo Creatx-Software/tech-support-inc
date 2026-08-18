@@ -17,3 +17,6 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 // Blog Page
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+
+// Blog Detail Page
+Route::get('/blogdetail', [BlogController::class, 'blogdetail'])->name('blogdetail');
