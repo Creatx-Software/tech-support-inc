@@ -19,15 +19,13 @@
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li><a class="menu-item" href="{{ route('home') }}">Home</a></li>
-                                    <li><a class="menu-item" href="rooms.html">Rooms</a>
+                                    <li><a class="menu-item" href="{{ route('services') }}">Services</a>
                                         <ul>
-                                            <li><a class="menu-item" href="rooms.html">Rooms Default</a></li>
-                                            <li><a class="menu-item new" href="rooms-interactive.html">Interactive</a></li>
-                                            <li><a class="menu-item new" href="rooms-grid.html">Rooms Grid</a></li>
-                                            <li><a class="menu-item" href="rooms-list.html">Rooms List</a></li>
-                                            <li><a class="menu-item" href="rooms-split.html">Rooms Split</a></li>
-                                            <li><a class="menu-item" href="rooms-slider.html">Rooms Slider</a></li>
-                                            <li><a class="menu-item" href="room-single.html">Single Room</a></li>
+                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">Managed IT Services</a></li>
+                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">Cybersecurity</a></li>
+                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">Cloud & Data Backup</a></li>
+                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">Network Setup & Support</a></li>
+                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">IT Consultancy & Strategy</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="menu-item" href="{{ route('about') }}">About</a></li>

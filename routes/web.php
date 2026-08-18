@@ -10,6 +10,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\TermsController;
 use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ServiceController;
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -40,3 +41,9 @@ Route::get('/privacy-policy', [PrivacyController::class, 'index'])->name('privac
 
 // FAQ Page
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
+
+// Services Page
+Route::get('/services', [ServiceController::class, 'index'])->name('services');
+
+//services detail page
+Route::get('/servicesdetail', [ServiceController::class, 'servicesdetail'])->name('servicesdetail');
