@@ -37,9 +37,9 @@
                                     <li><a class="menu-item" href="#">More</a>
                                         <ul>
                                             <li><a class="menu-item" href="{{ route('testimonial') }}">Testimonials</a></li>
+                                            <li><a class="menu-item" href="{{ route('gallery') }}">Gallery</a></li>
                                             <li><a class="menu-item" href="facilities.html">Facilities</a></li>
                                             <li><a class="menu-item" href="offers.html">Offers</a></li>
-                                            <li><a class="menu-item" href="gallery.html">Gallery</a></li>
                                             <li><a class="menu-item" href="gallery-carousel.html">Gallery Carousel</a></li>
                                             <li><a class="menu-item" href="testimonials.html">Testimonials</a></li>
                                         </ul>

@@ -6,6 +6,7 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\GalleryController;
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -24,3 +25,6 @@ Route::get('/blogdetail', [BlogController::class, 'blogdetail'])->name('blogdeta
 
 // Testimonial Page
 Route::get('/testimonial', [TestimonialController::class, 'index'])->name('testimonial');
+
+// Gallery Page
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
