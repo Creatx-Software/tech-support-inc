@@ -32,7 +32,8 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         Copyright © {{ date('Y') }} Tech Support Inc. All rights reserved.
-                        <span class="mx-2">|</span>
+                        <br/>
+                        
                         <a href="{{ route('terms') }}">Terms &amp; Conditions</a>
                         <span class="mx-2">|</span>
                         <a href="{{ route('privacy') }}">Privacy Policy</a>
