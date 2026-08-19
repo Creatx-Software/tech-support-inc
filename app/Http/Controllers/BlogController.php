@@ -21,7 +21,8 @@ class BlogController extends Controller
             })
             ->with('category')
             ->orderByDesc('date')
-            ->get();
+            ->paginate(7)
+            ->withQueryString();
 
         $categories = BlogCategory::where('is_active', true)
             ->withCount(['blogs' => fn ($q) => $q->where('is_active', true)])

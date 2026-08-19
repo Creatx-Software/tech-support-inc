@@ -47,5 +47,44 @@
                     @endforelse
 
                 </div>
+
+                @if ($blogs->hasPages())
+                    <div class="mt-5">
+                        {{ $blogs->onEachSide(1)->links('vendor.pagination.blog') }}
+                    </div>
+                @endif
             </div>
         </section>
+
+        <style>
+            .pagination .page-link {
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: none;
+                background: transparent;
+                color: var(--primary-color);
+                padding: 0;
+            }
+
+            .pagination .page-item.active .page-link {
+                background: var(--secondary-color);
+                color: #fff;
+            }
+
+            .pagination .page-item:not(.disabled) .page-link:hover,
+            .pagination .page-item:not(.disabled) .page-link:focus {
+                background: var(--secondary-color);
+                color: #fff;
+                box-shadow: none;
+            }
+
+            .pagination .page-item.disabled .page-link {
+                background: transparent;
+                color: #ccc;
+                box-shadow: none;
+            }
+        </style>
