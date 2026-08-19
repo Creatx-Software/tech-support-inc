@@ -23,6 +23,7 @@ Route::get('/about', [AboutUsController::class, 'index'])->name('about');
 
 // Contact Page
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 // Blog Page
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');

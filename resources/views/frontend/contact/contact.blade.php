@@ -41,7 +41,8 @@
 
                 <div class="col-lg-6">
                     <div class="bg-color-op-1 rounded-1 p-40 relative">
-                        <form name="contactForm" id="contact_form" method="post" action="contact.php">
+                        <form name="contactForm" id="contact_form" method="post" action="{{ route('contact.store') }}">
+                        @csrf
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <h3 class="fs-18">Name</h3>

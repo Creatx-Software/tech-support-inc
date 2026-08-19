@@ -3,6 +3,7 @@
 
 <head>
     <title>Tech Support Inc - Reliable IT Support for UK Small Businesses</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="/assets/images/icon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
@@ -54,6 +55,9 @@
     <script src="/assets/js/moment.js"></script>
     <script src="/assets/js/daterangepicker.js"></script>
     <script src="/assets/js/custom-datepicker.js"></script>
+
+    <!-- contact form -->
+    <script src="/assets/js/validation-contact.js"></script>
 
 </body>
 
