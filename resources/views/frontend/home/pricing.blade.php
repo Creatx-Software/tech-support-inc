@@ -8,53 +8,43 @@
                 </div>
 
                 <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="overflow-hidden rounded-1">
-                            <div class="hover relative">
-                                <h3 class="abs bg-color rounded-3 text-white fs-20 lh-1 p-2 px-3 m-4 top-0 start-0 z-3">PAY AS YOU GO</h3>
-                                <img src="/assets/images/home/pexels-michael-burrows-7129688.jpg" class="w-100 hover-scale-1-1" alt="">
-                                <a href="{{ route('pricing') }}" class="d-block abs w-100 h-100 top-0 start-0"></a>
-                            </div>
-                            <div class="p-40 bg-dark-2 text-light relative">
-                                <a class="text-white" href="{{ route('pricing') }}">
-                                    <h3>Ad-Hoc Support</h3>
-                                    <p>One-Off Fixes, No Contract Required</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="overflow-hidden rounded-1">
-                            <div class="p-40 bg-dark-2 text-light relative">
-                                <a class="text-white" href="{{ route('pricing') }}">
-                                    <h3>Essential Support</h3>
-                                    <p>Reliable Cover for Day-to-Day IT Needs</p>
-                                </a>
-                            </div>
-                            <div class="hover relative">
-                                <h3 class="abs bg-color rounded-3 text-white fs-20 lh-1 p-2 px-3 m-4 bottom-0 start-0 z-3">MOST POPULAR</h3>
-                                <img src="/assets/images/home/pexels-mikhail-nilov-6968091.jpg" class="w-100 hover-scale-1-1" alt="">
-                                <a href="{{ route('pricing') }}" class="d-block abs w-100 h-100 top-0 start-0"></a>
-                            </div>
-                        </div>
-                    </div>
+                    @forelse ($featuredPlans as $plan)
+                        <div class="col-lg-4 wow fadeInUp" data-wow-delay="{{ $loop->index * 0.2 }}s">
+                            <div class="overflow-hidden rounded-1">
+                                @if ($loop->index % 2 === 1)
+                                    <div class="p-40 bg-dark-2 text-light relative">
+                                        <a class="text-white" href="{{ route('pricing') }}">
+                                            <h3>{{ $plan->title }}</h3>
+                                            <p>{{ $plan->description }}</p>
+                                        </a>
+                                    </div>
+                                @endif
 
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="overflow-hidden rounded-1">
-                            <div class="hover relative">
-                                <h3 class="abs bg-color rounded-3 text-white fs-20 lh-1 p-2 px-3 m-4 top-0 start-0 z-3">FULLY MANAGED</h3>
-                                <img src="/assets/images/home/pexels-mizunokozuki-12899113.jpg" class="w-100 hover-scale-1-1" alt="">
-                                <a href="{{ route('pricing') }}" class="d-block abs w-100 h-100 top-0 start-0"></a>
-                            </div>
-                            <div class="p-40 bg-dark-2 text-light relative">
-                                <a class="text-white" href="{{ route('pricing') }}">
-                                    <h3>Professional Support</h3>
-                                    <p>Proactive, Fully Managed IT Support</p>
-                                </a>
+                                <div class="hover relative">
+                                    @if ($plan->badge)
+                                        <h3 class="abs bg-color rounded-3 text-white fs-20 lh-1 p-2 px-3 m-4 {{ $loop->index % 2 === 1 ? 'bottom-0' : 'top-0' }} start-0 z-3 text-uppercase">{{ $plan->badge }}</h3>
+                                    @endif
+                                    <img src="{{ $plan->image_url }}" class="w-100 hover-scale-1-1" style="height: 480px; object-fit: cover;" alt="{{ $plan->title }}">
+                                    <a href="{{ route('pricing') }}" class="d-block abs w-100 h-100 top-0 start-0"></a>
+                                </div>
+
+                                @if ($loop->index % 2 === 0)
+                                    <div class="p-40 bg-dark-2 text-light relative">
+                                        <a class="text-white" href="{{ route('pricing') }}">
+                                            <h3>{{ $plan->title }}</h3>
+                                            <p>{{ $plan->description }}</p>
+                                        </a>
+                                    </div>
+                                @endif
                             </div>
                         </div>
-                    </div>
+                    @empty
+                        <div class="col-lg-12 text-center">
+                            <p class="mb-0">No featured plans available right now.</p>
+                        </div>
+                    @endforelse
+
                 </div>
 
             </div>
