@@ -35,5 +35,6 @@ class DatabaseSeeder extends Seeder
         $this->call(BlogTagSeeder::class);
         $this->call(BlogSeeder::class);
         $this->call(TestimonialSeeder::class);
+        $this->call(GallerySeeder::class);
     }
 }

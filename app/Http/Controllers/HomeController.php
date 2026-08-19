@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Gallery;
 use App\Models\PricingPlan;
 use App\Models\Service;
 use App\Models\Testimonial;
@@ -35,6 +36,19 @@ class HomeController extends Controller
             ->orderBy('sort_order')
             ->get();
 
-        return view('frontend.home.index', compact('featuredServices', 'featuredPlans', 'featuredBlogs', 'featuredTestimonials'));
+        $featuredGalleries = Gallery::where('is_active', true)
+            ->where('is_feature', true)
+            ->orderBy('sort_order')
+            ->get();
+
+        $galleryCategories = $featuredGalleries
+            ->unique('category_name')
+            ->map(fn ($gallery) => [
+                'name' => $gallery->category_name,
+                'slug' => $gallery->category_slug,
+            ])
+            ->values();
+
+        return view('frontend.home.index', compact('featuredServices', 'featuredPlans', 'featuredBlogs', 'featuredTestimonials', 'featuredGalleries', 'galleryCategories'));
     }
 }

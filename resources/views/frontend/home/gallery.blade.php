@@ -20,134 +20,30 @@
                   <div class="col-md-12 text-center">
                       <ul id="filters" class="wow fadeInUp" data-wow-delay="0s">
                         <li><a href="#" data-filter="*" class="selected">View All</a></li>
-                          <li><a href="#" data-filter=".support">IT Support</a></li>
-                          <li><a href="#" data-filter=".security">Cybersecurity</a></li>
-                          <li><a href="#" data-filter=".cloud">Cloud & Backup</a><li>
+                          @foreach ($galleryCategories as $category)
+                              <li><a href="#" data-filter=".{{ $category['slug'] }}">{{ $category['name'] }}</a></li>
+                          @endforeach
                       </ul>
                   </div>
                 </div>
 
                 <div id="gallery" class="row g-3 wow fadeIn" data-wow-delay=".3s">
 
-                    <div class="col-md-3 col-sm-6 col-12 item support">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item security">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item cloud">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item support">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item security">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item support">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item cloud">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item support">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item cloud">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item support">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item security">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-12 item cloud">
-                      <a href="/assets/images/gallery/5634764.webp" class="image-popup d-block hover">
-                          <div class="relative overflow-hidden rounded-1">
-                              <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
-                              <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
-                              <img src="/assets/images/gallery/5634764.webp" class="w-100 hover-scale-1-2" alt="">
-                          </div>
-                      </a>
-                    </div>
+                    @forelse ($featuredGalleries as $gallery)
+                        <div class="col-md-3 col-sm-6 col-12 item {{ $gallery->category_slug }}">
+                          <a href="{{ $gallery->image_url }}" class="image-popup d-block hover">
+                              <div class="relative overflow-hidden rounded-1">
+                                  <div class="absolute start-0 w-100 hover-op-1 p-5 abs-middle z-3 text-center text-white">View</div>
+                                  <div class="absolute start-0 w-100 h-100 overlay-black-5 hover-op-1 z-2"></div>
+                                  <img src="{{ $gallery->image_url }}" class="w-100 hover-scale-1-2" style="height: 280px; object-fit: cover;" alt="{{ $gallery->title }}">
+                              </div>
+                          </a>
+                        </div>
+                    @empty
+                        <div class="col-12">
+                            <p class="text-center">No featured gallery images to show yet.</p>
+                        </div>
+                    @endforelse
 
                     </div>
             </div>
