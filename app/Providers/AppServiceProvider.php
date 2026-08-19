@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Service;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::composer('frontend.components.header', function ($view) {
+            $view->with('navFeaturedServices', Service::where('is_active', true)
+                ->where('is_feature', true)
+                ->orderBy('id')
+                ->get());
+        });
     }
 }

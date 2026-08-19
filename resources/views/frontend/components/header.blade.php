@@ -21,11 +21,9 @@
                                     <li><a class="menu-item" href="{{ route('home') }}">Home</a></li>
                                     <li><a class="menu-item" href="{{ route('services') }}">Services</a>
                                         <ul>
-                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">Managed IT Services</a></li>
-                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">Cybersecurity</a></li>
-                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">Cloud & Data Backup</a></li>
-                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">Network Setup & Support</a></li>
-                                            <li><a class="menu-item" href="{{ route('servicesdetail') }}">IT Consultancy & Strategy</a></li>
+                                            @foreach ($navFeaturedServices as $navService)
+                                                <li><a class="menu-item" href="{{ url($navService->slug) }}">{{ $navService->title }}</a></li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li><a class="menu-item" href="{{ route('about') }}">About</a></li>

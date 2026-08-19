@@ -6,7 +6,7 @@
                     <div class="col-lg-7 text-center">
                         <div class="subtitle id-color wow fadeInUp mb-2">Service Details</div>
                         <div class="clearfix"></div>
-                        <h2 class="fs-60 fs-xs-8vw wow fadeInUp" data-wow-delay=".4s">Managed IT Services</h2>
+                        <h2 class="fs-60 fs-xs-8vw wow fadeInUp" data-wow-delay=".4s">{{ $service->title }}</h2>
                     </div>
                 </div>
             </div>
@@ -14,7 +14,7 @@
                 <ul class="crumb">
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('services') }}">Services</a></li>
-                    <li class="active">Managed IT Services</li>
+                    <li class="active">{{ $service->title }}</li>
                 </ul>
             </div>
             <div class="sw-overlay op-8"></div>

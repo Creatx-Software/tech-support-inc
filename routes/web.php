@@ -12,6 +12,8 @@ use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\PricingController;
+use App\Http\Controllers\RouteController;
+
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -46,8 +48,9 @@ Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 // Services Page
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
 
-//services detail page
-Route::get('/servicesdetail', [ServiceController::class, 'servicesdetail'])->name('servicesdetail');
-
 // Pricing Page
 Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
+
+
+// Catch-all dynamic routes - MUST BE LAST
+Route::get('/{slug}', [RouteController::class, 'resolve']);

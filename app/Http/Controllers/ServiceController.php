@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
     public function index()
     {
-        return view('frontend.services.index');
-    }
+        $services = Service::where('is_active', true)
+            ->orderBy('id')
+            ->get();
 
-    public function servicesdetail()
-    {
-        return view('frontend.servicesdetail.index');
+        return view('frontend.services.index', compact('services'));
     }
 }
