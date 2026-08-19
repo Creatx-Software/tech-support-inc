@@ -31,5 +31,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call(ServiceSeeder::class);
         $this->call(PricingPlanSeeder::class);
+        $this->call(BlogCategorySeeder::class);
+        $this->call(BlogTagSeeder::class);
+        $this->call(BlogSeeder::class);
     }
 }

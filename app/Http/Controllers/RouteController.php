@@ -44,7 +44,7 @@ class RouteController extends Controller
                                 ->where('id', '!=', $blog->id)
                                 ->with('category')
                                 ->inRandomOrder()
-                                ->take(3)
+                                ->take(2)
                                 ->get();
 
             $categories = BlogCategory::where('is_active', true)
