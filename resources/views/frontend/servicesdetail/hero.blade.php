@@ -14,7 +14,7 @@
                 <ul class="crumb">
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('services') }}">Services</a></li>
-                    <li class="active">{{ $service->title }}</li>
+                    <li class="active">{{ Str::limit($service->title, 10, '...') }}</li>
                 </ul>
             </div>
             <div class="sw-overlay op-8"></div>
