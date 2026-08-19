@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Testimonial;
 
 class TestimonialController extends Controller
 {
     public function index()
     {
-        return view('frontend.testimonials.index');
+        $testimonials = Testimonial::where('is_active', true)
+            ->orderBy('sort_order')
+            ->get();
+
+        return view('frontend.testimonials.index', compact('testimonials'));
     }
 }

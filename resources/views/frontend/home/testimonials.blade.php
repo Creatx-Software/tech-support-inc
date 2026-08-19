@@ -17,53 +17,21 @@
                     <div class="col-lg-7">
                         <div class="owl-single-dots owl-carousel owl-theme">
 
-                            <div class="item">
-                                <span class="d-stars id-color d-block mb-3">
-                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
-                                </span>
-                                <h3 class="mb-4 wow fadeInUp fs-40">Tech Support Inc sorted our network issues within hours, not days. Fast, professional, and always easy to reach.</h3>
-                                <span class="wow fadeInUp">Anna L., London</span>
-                            </div>
-
-                            <div class="item">
-                                <span class="d-stars id-color d-block mb-3">
-                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
-                                </span>
-                                <h3 class="mb-4 wow fadeInUp fs-40">Having a proper IT partner has taken so much stress off our small team. Their support just works, every time.</h3>
-                                <span class="wow fadeInUp">Michael H., Manchester</span>
-                            </div>
-
-                            <div class="item">
-                                <span class="d-stars id-color d-block mb-3">
-                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
-                                </span>
-                                <h3 class="mb-4 wow fadeInUp fs-40">Impeccable attention to detail. They monitor our systems proactively so problems get caught before we even notice.</h3>
-                                <span class="wow fadeInUp">Nadia R., Birmingham</span>
-                            </div>
-
-                            <div class="item">
-                                <span class="d-stars id-color d-block mb-3">
-                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
-                                </span>
-                                <h3 class="mb-4 wow fadeInUp fs-40">From onboarding to ongoing support, the experience has been effortless. Highly recommended for any small business.</h3>
-                                <span class="wow fadeInUp">Tom S., Leeds</span>
-                            </div>
-
-                            <div class="item">
-                                <span class="d-stars id-color d-block mb-3">
-                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
-                                </span>
-                                <h3 class="mb-4 wow fadeInUp fs-40">Friendly, knowledgeable engineers and genuinely quick response times. We finally trust our systems again.</h3>
-                                <span class="wow fadeInUp">Elise K., Bristol</span>
-                            </div>
-
-                            <div class="item">
-                                <span class="d-stars id-color d-block mb-3">
-                                    <i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i><i class="icofont-star"></i>
-                                </span>
-                                <h3 class="mb-4 wow fadeInUp fs-40">Exceptional service and clear communication. The perfect IT partner for a growing business like ours.</h3>
-                                <span class="wow fadeInUp">David M., Edinburgh</span>
-                            </div>
+                            @forelse ($testimonials as $testimonial)
+                                <div class="item">
+                                    <span class="d-stars id-color d-block mb-3">
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            <i class="icofont-star" style="{{ $i <= round($testimonial->rating) ? '' : 'opacity: 0.3;' }}"></i>
+                                        @endfor
+                                    </span>
+                                    <h3 class="mb-4 wow fadeInUp fs-40">{{ $testimonial->review }}</h3>
+                                    <span class="wow fadeInUp">{{ $testimonial->name }}</span>
+                                </div>
+                            @empty
+                                <div class="item">
+                                    <p class="mb-0">No featured testimonials yet.</p>
+                                </div>
+                            @endforelse
 
                         </div>
                     </div>

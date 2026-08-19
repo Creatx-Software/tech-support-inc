@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\PricingPlan;
 use App\Models\Service;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,6 +30,11 @@ class HomeController extends Controller
             ->take(4)
             ->get();
 
-        return view('frontend.home.index', compact('featuredServices', 'featuredPlans', 'featuredBlogs'));
+        $featuredTestimonials = Testimonial::where('is_active', true)
+            ->where('is_feature', true)
+            ->orderBy('sort_order')
+            ->get();
+
+        return view('frontend.home.index', compact('featuredServices', 'featuredPlans', 'featuredBlogs', 'featuredTestimonials'));
     }
 }
