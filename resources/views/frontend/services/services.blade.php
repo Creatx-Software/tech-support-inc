@@ -12,7 +12,7 @@
             </div>
         </section>
 
-        <section id="section-services-list" class="bg-light" aria-label="section">
+        <section id="section-services-list" class="bg-light pt-0" aria-label="section">
             <div class="container">
                 <div class="row g-4">
 

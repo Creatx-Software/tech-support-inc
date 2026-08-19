@@ -1,6 +1,6 @@
         <section aria-label="section">
             <div class="container">
-                <div class="row g-4 mb-2 justify-content-center">
+                <div class="row g-4 mb-5 justify-content-center">
                     <div class="col-lg-8 text-center">
                         <div class="subtitle id-color wow fadeInUp" data-wow-delay=".0s">Short Overview</div>
                         <p class="fs-20 mb-0 wow fadeInUp" data-wow-delay=".2s">
@@ -8,11 +8,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section aria-label="section">
-            <div class="container">
                 <div class="row gx-5">
                     <div class="col-lg-8">
 

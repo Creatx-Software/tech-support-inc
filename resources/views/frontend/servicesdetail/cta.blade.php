@@ -1,6 +1,6 @@
 
 
-        <section aria-label="section">
+        <section aria-label="section" class="pt-0">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
