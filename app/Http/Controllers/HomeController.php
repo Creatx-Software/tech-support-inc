@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Faq;
 use App\Models\Gallery;
 use App\Models\PricingPlan;
 use App\Models\Service;
@@ -49,6 +50,11 @@ class HomeController extends Controller
             ])
             ->values();
 
-        return view('frontend.home.index', compact('featuredServices', 'featuredPlans', 'featuredBlogs', 'featuredTestimonials', 'featuredGalleries', 'galleryCategories'));
+        $featuredFaqs = Faq::where('is_active', true)
+            ->where('is_feature', true)
+            ->orderBy('sort_order')
+            ->get();
+
+        return view('frontend.home.index', compact('featuredServices', 'featuredPlans', 'featuredBlogs', 'featuredTestimonials', 'featuredGalleries', 'galleryCategories', 'featuredFaqs'));
     }
 }

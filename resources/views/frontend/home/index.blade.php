@@ -10,7 +10,7 @@
     @include('frontend.home.gallery')
     @include('frontend.home.banner')
     @include('frontend.home.pricing')
-    @include('frontend.home.faq')
+    @include('frontend.home.faq', ['featuredFaqs' => $featuredFaqs])
     @include('frontend.home.video')
     @include('frontend.home.blog')
     @include('frontend.home.temp')
