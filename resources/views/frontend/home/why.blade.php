@@ -12,7 +12,7 @@
 
                 <div class="row g-4">
                     <div class="col-md-6">
-                        <div class="h-100 rounded-1 mh-300 wow fadeInUp" data-bgimage="url(/assets/images/home/Elevating_Performance_The_Benefits_of_IT_Support_Services_in_Business_.jpg) center"></div>
+                        <div class="h-100 rounded-1 mh-300 wow fadeInUp" data-bgimage="url(/assets/images/home/tech_support_team_collaboration.webp) center"></div>
                     </div>
 
                     <div class="col-md-6">
@@ -62,7 +62,7 @@
 
                             <!-- ENGINEER TEAM IMAGE -->
                             <div class="col-md-6 wow fadeInUp sm-hide d-md-block d-xs-none" data-wow-delay=".6s">
-                                <div class="p-30 bg-dark-2 rounded-1 h-100" data-bgimage="url(/assets/images/home/organic-flat-customer-support_23-2148895051.avif) center">
+                                <div class="p-30 bg-dark-2 rounded-1 h-100" data-bgimage="url(/assets/images/home/it_support_engineer_headset.webp) center">
                                 </div>
                             </div>
 
