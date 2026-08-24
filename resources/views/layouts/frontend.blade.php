@@ -4,7 +4,7 @@
 <head>
     <title>Tech Support Inc - Reliable IT Support for UK Small Businesses</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="/assets/images/icon.webp" type="image/gif" sizes="16x16">
+    <link rel="icon" href="/assets/images/logo/favicon.webp" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
     <meta content="Tech Support Inc is a UK-based IT support company helping small businesses stay secure, connected, and running smoothly with reliable IT support and technology solutions." name="description" >
