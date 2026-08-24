@@ -8,8 +8,8 @@
                             Level 01, 39 Fitzroy Square<br>
                             London W1T 6EZ
                         </div>
-                        <div>
-                            <img src="/assets/images/logo-white.webp" class="w-150px" alt=""><br>
+                        <div class="my-4 my-lg-0">
+                            <img src="/assets/images/logo/logo-horizontal-gold.svg" class="w-150px" alt=""><br>
                             <div class="social-icons mb-sm-30 mt-4">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
