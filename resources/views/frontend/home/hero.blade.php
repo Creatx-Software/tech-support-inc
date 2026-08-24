@@ -4,9 +4,9 @@
                     <div class="container-fluid">
                         <div class="row g-4 justify-content-between align-items-end">
                             <div class="col-md-10">
-                                <h1 class="fs-96 lh-1 fs-xs-10vw wow fadeInUp mb-2">Reliable IT Support for Growing UK Businesses</h1>
+                                <h1 class="fs-96 lh-1 fs-xs-10vw wow fadeInUp mb-2">Reliable IT Support for Growing UK <span id="hero-typed" class="id-color">Businesses</span></h1>
                             </div>
-                            <div class="col-md-6 offset-md-1">
+                            <div class="col-md-6">
                                 <p class="col-md-8 text-white wow fadeInUp" data-wow-delay=".4s">Tech Support Inc keeps your systems secure, connected, and running smoothly — a trusted IT partner for small businesses across the UK.</p>
                                 <a href="{{ route('contact') }}" class="btn-main fx-slide hover-white wow fadeInUp" data-wow-delay=".8s"><span>Get IT Support</span></a>
                             </div>
@@ -40,3 +40,28 @@
             </div>
 
         </section>
+
+        @push('styles')
+        <style>
+            #hero-typed + .typed-cursor {
+                color: var(--primary-color);
+                font-size: 0.8em;
+                vertical-align: middle;
+                display: none;
+            }
+        </style>
+        @endpush
+
+        @push('scripts')
+        <script>
+            jQuery(function($) {
+                $('#hero-typed').typed({
+                    strings: ['Businesses', 'Companies', 'Startups', 'Enterprises'],
+                    typeSpeed: 80,
+                    backSpeed: 40,
+                    backDelay: 1500,
+                    loop: true
+                });
+            });
+        </script>
+        @endpush
