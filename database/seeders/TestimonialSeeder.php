@@ -95,7 +95,7 @@ class TestimonialSeeder extends Seeder
                     'rating' => 5.0,
                     'review' => $testimonial['review'],
                     'sort_order' => $index,
-                    'is_feature' => false,
+                    'is_feature' => $index < 6,
                     'is_active' => true,
                 ]
             );
