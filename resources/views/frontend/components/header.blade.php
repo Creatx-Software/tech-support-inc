@@ -7,9 +7,9 @@
                             <!-- logo begin -->
                             <div id="logo">
                                 <a href="{{ route('home') }}">
-                                    <img class="logo-main" src="/assets/images/logo-black.webp" alt="" >
-                                    <img class="logo-scroll" src="/assets/images/logo-black.webp" alt="" >
-                                    <img class="logo-mobile" src="/assets/images/logo-black.webp" alt="" >
+                                    <img class="logo-main" src="/assets/images/logo/logo-horizontal-gold-black.svg" alt="" >
+                                    <img class="logo-scroll" src="/assets/images/logo/logo-horizontal-gold-black.svg" alt="" >
+                                    <img class="logo-mobile" src="/assets/images/logo/logo-horizontal-gold-black.svg" alt="" >
                                 </a>
                             </div>
                             <!-- logo close -->
